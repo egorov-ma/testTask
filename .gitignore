@@ -1,0 +1,25 @@
+# Intellij IDEA
+/.idea
+*.iml
+
+# Selenide
+/build/
+
+# Compiled class file
+target/
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Allure
+/allure-results/
