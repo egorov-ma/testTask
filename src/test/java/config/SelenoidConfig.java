@@ -25,8 +25,11 @@ public class SelenoidConfig {
         Configuration.clickViaJs = true;
         Configuration.startMaximized = true;
         Configuration.baseUrl = "";
-        Configuration.browserCapabilities.setCapability("enableVNC", false);
+        Configuration.browserCapabilities.setCapability("enableVNC", true);
         Configuration.browserCapabilities.setCapability("enableVideo", false);
+        Configuration.browserCapabilities.setCapability("screenResolution", "1920x1080x24");
+        Configuration.browserCapabilities.setCapability("sessionTimeout", "1h");
+        Configuration.browserCapabilities.setCapability("enableLog", true);
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
         logger.info("ok");
     }

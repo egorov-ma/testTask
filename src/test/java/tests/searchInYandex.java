@@ -15,8 +15,11 @@ public class searchInYandex extends BasePage {
     }
 
     @Test
-    public void checkYandex() {
+    public void checkYandex() throws InterruptedException {
         open(Links.YANDEX_MAIN_PAGE.getUrl());
+
         System.out.println("привет мир!");
+
+        Thread.sleep(10000);
     }
 }
