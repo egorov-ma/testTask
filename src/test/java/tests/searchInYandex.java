@@ -16,6 +16,7 @@ public class searchInYandex extends BasePage {
 
     @Test
     public void checkYandex() {
-        System.out.println("привет мир!");
+        mainPage.textInput("propellerads");
+        mainPage.checkSearch(5, "my.propellerads.com");
     }
 }
