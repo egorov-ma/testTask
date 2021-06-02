@@ -4,15 +4,13 @@ import com.codeborne.selenide.Selenide;
 import config.SelenoidConfig;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 
 public class SelenoidRunner {
 
-    @Parameters({"BROWSER"})
     @BeforeClass(alwaysRun = true)
-    public void setUp(String browser) {
+    public void setUp() {
         SelenoidConfig selenoidConfig = new SelenoidConfig();
-        selenoidConfig.createWebDriverInstance(browser);
+        selenoidConfig.createWebDriverInstance();
     }
 
     @AfterMethod(alwaysRun = true)
